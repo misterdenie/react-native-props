@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, StyleSheet } from 'react-native'; // นำเข้า View และ StyleSheet จาก react-native
+import MyComponent from './components/MyComponent'; // นำเข้า MyComponent ที่สร้างไว้
 
+// ฟังก์ชันคอมโพเนนต์หลักของแอป
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* แสดง MyComponent พร้อมส่งค่า title ที่แตกต่างกัน */}
+      <MyComponent title="เกี่ยวกับบุหรี่ไฟฟ้า" />
+      <MyComponent title="อันตรายจากบุหรี่ไฟฟ้า" />
+      <MyComponent title="ผลกระทบของบุหรี่ไฟฟ้า" />
+      <MyComponent title="การเลิกบุหรี่ไฟฟ้า" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const styles = StyleSheet.create({ 
+  container: { flex: 1, margin:16, justifyContent: 'center', alignItems: 'center' } 
 });
